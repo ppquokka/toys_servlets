@@ -2,13 +2,12 @@ package com.example.toys_servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = "/loginServlet")
+
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +28,7 @@ try {
             response.sendRedirect("/surveyServlet");
         } else {
             // 로그인 실패 시 다시 로그인 페이지로 이동합니다.
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("/login.jsp");
         }
 } catch (Exception e) {
     System.out.println(e.getMessage());
