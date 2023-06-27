@@ -12,6 +12,14 @@
 </head>
 
 <body>
+    <div class="container">
+        <% String search=(String) request.getAttribute("search"); %>
+            <form action="/oInforsServlet">
+                <label>검색
+                    <input type="text" name="search" value="<%= search %>">
+                </label>
+                <button>검색 하기</button>
+            </form>
     <div class = h3>회원관리</div>
     <div class="container">
         <table class="table table-bordered table-hover">
