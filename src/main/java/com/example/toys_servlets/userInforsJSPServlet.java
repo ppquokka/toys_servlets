@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.study_servlets.daos.OptionInforsDao;
-import com.example.study_servlets.daos.UserInforsDao;
+import com.example.toys_servlets.daos.UserInforsDao;
 
 
 @WebServlet(urlPatterns = "/userInforsJSPServlet")
@@ -31,9 +31,9 @@ public class userInforsJSPServlet extends HttpServlet {
 
             UserInforsDao userInforsDao = new UserInforsDao();
             ArrayList userInforList = new ArrayList<>();
-            userInforList = userInforsDao.SelectWithSearch(search);
+            userInforList = userInforsDao.selectWithSearch(search);
 
-            request.setAttribute("search", search);
+           request.setAttribute("search", search);
             request.setAttribute("userInforList", userInforList);
 
             // getWriter 전에 charset 하기
