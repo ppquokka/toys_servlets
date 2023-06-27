@@ -14,7 +14,8 @@ public class UserInforsDao {
         try {
             Commons commons = new Commons();
             Statement statement = commons.getStatement();
-            String query = "SELECT * FROM `db-toysservlet`.user;";
+           
+            String query = "SELECT * FROM db-toysservlet.user;";
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
@@ -32,5 +33,9 @@ public class UserInforsDao {
     public ArrayList<HashMap<String, String>> selectWithSearch(String search) {
         // 이 부분은 구현해야 할 내용입니다.
         return null;
+    }
+
+    public int SeleteWithUniqueID(String unique_id) {
+        return 0;
     }
 }

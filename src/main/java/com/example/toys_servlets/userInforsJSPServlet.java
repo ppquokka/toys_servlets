@@ -28,12 +28,12 @@ public class UserInforsJSPServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             String search = request.getParameter("search");
-
+            ArrayList optionInforList = new ArrayList<>();
             UserInforsDao userInforsDao = new UserInforsDao();
-            ArrayList userInforList = new ArrayList<>();
-            userInforList = userInforsDao.selectWithSearch(search);
+         
+            ArrayList<HashMap<String, String>> userInforList = userInforsDao.selectWithSearch(search);
 
-           request.setAttribute("search", search);
+            request.setAttribute("search", search);
             request.setAttribute("userInforList", userInforList);
 
             // getWriter 전에 charset 하기
