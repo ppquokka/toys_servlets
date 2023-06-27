@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.example.study_servlets.daos.OptionInforsDao;
+
 @WebServlet(urlPatterns = "/optionInforsDeleteServlet")
 public class OptionInforsDeleteServlet extends HttpServlet{
     @Override

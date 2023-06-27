@@ -18,21 +18,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.example.study_servlets.daos.OptionInforsDao;
+import com.example.study_servlets.daos.UserInforsDao;
 
-@WebServlet(urlPatterns = "/optionInforsJSPServlet")
-public class OptionInforsJSPServlet extends HttpServlet {
+
+@WebServlet(urlPatterns = "/userInforsJSPServlet")
+public class userInforsJSPServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             String search = request.getParameter("search");
 
-            OptionInforsDao optionInforsDao = new OptionInforsDao();
-            ArrayList optionInforList = new ArrayList<>();
-            optionInforList = optionInforsDao.SelectWithSearch(search);
+            UserInforsDao userInforsDao = new UserInforsDao();
+            ArrayList userInforList = new ArrayList<>();
+            userInforList = userInforsDao.SelectWithSearch(search);
 
             request.setAttribute("search", search);
-            request.setAttribute("optionInforList", optionInforList);
+            request.setAttribute("userInforList", userInforList);
 
             // getWriter 전에 charset 하기
             response.setContentType("text/html;charset=UTF-8");
