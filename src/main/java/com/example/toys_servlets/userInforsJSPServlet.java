@@ -22,7 +22,7 @@ import com.example.toys_servlets.daos.UserInforsDao;
 
 
 @WebServlet(urlPatterns = "/userInforsJSPServlet")
-public class userInforsJSPServlet extends HttpServlet {
+public class UserInforsJSPServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,7 +40,7 @@ public class userInforsJSPServlet extends HttpServlet {
             response.setContentType("text/html;charset=UTF-8");
 
             // 다음 파일 호출
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/cars/option_infors.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("");
             requestDispatcher.forward(request, response);
 
         } catch (Exception e) {
