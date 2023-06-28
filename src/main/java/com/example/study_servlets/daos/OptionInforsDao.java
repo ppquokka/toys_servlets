@@ -5,14 +5,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.example.toys_servlets.commons.Commons;
+import com.example.toys_servlets.commons.Common;
 
 public class OptionInforsDao {
     public int DeleteWithUniqueID(String unique_id){
         int count = 0;
         try {
-            Commons commons = new Commons();
-            Statement statement = commons.getStatement(); // Editor in Workbanch
+            Common common = new Common();
+            Statement statement = common.getStatement(); // Editor in Workbanch
             String query = "delete from option_infors\n" + //
                     "where OPTION_INFOR_ID = '"+unique_id+"';";
             count = statement.executeUpdate(query);
@@ -28,8 +28,8 @@ public class OptionInforsDao {
             if(search == null){
                 search = "";
             }
-            Commons commons = new Commons();
-            Statement statement = commons.getStatement(); // Editor in Workbanch
+            Common common = new Common();
+            Statement statement = common.getStatement(); // Editor in Workbanch
             String query = "SELECT *\n" + //
                     "FROM option_infors\n" + //
                     "WHERE OPTION_NAME like '"+search+"%' ;";
