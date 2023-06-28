@@ -16,7 +16,7 @@ public class Commons {
 
 
 public Statement getStatement(){
-        String url = "jdbc:mysql://192.168.0.41:8080:3306/DB_TOYSSERVLET";
+        String url = "jdbc:mysql://192.168.0.41:3306/DB_TOYSSERVLET";
         String user = "DB_TOYSSERVLET";
         String password = "!YOJULAB*";
 
