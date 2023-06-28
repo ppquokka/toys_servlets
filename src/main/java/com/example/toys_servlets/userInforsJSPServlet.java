@@ -3,9 +3,6 @@
 package com.example.toys_servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -27,17 +24,12 @@ public class UserInforsJSPServlet extends HttpServlet {
             String search = request.getParameter("search");
 
             UserInforsDao userInforsDao = new UserInforsDao();
-            ArrayList userInforList = new ArrayList<>();
-            userInforList = userInforsDao.SelectWithSearch(search);
+            ArrayList<HashMap<String, String>> userInforList = userInforsDao.SelectWithSearch(search);
 
             request.setAttribute("search", search);
             request.setAttribute("userInforList", userInforList);
-        
 
-            // getWriter 전에 charset 하기
-            response.setContentType("text/html;charset=UTF-8");
-
-            // 다음 파일 호출
+            // 다음 파일(jsp) 호출
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey/membersInformation.jsp");
             requestDispatcher.forward(request, response);
 

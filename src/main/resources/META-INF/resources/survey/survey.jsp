@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% System.out.println("Survey - doGet()"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
 
 <body>
     <h1>설문조사</h1>
-    <form action="/submitSurveyServlet" method="post">
+    <form action="/requestServlet" method="post">
         <p>1. 교수는 수업 전 강의 목표를 명확히 제시하였습니까?</p>
         <input type="radio" id="q1-1" name="q1" value="1">
         <label for="q1-1">전혀 아니다.</label>
@@ -72,3 +73,4 @@
 </body>
 
 </html>
+<% System.out.println("Survey - doGet() done."); %>
