@@ -1,1 +1,21 @@
+○ Toys_Servelt Web화면 링크
+
+○ 화면은 나옴
+- http://192.168.0.41:8080/loginServlet 
+- http://192.168.0.41:8080/surveyServlet  
+- http://192.168.0.41:8080/requestServlet
+- http://192.168.0.41:8080/userInforsJSPServlet 
+- http://192.168.0.41:8080/userDetailInforsServlet
+- http://192.168.0.41:8080/UserInforsSelectServlet
+
+○ 화이트 페이지
+- http://192.168.0.41:8080/userInforsServlet 
+
+○ Whitelabel Error Page
+- http://192.168.0.41:8080/optionInforsJSPServlet
+- 192.168.0.41:8080/submitSurveyServlet 
+
+
+
+ 
 
