@@ -52,7 +52,34 @@ public class UserInforsDao {
         }
         return optionInforList;
     }
+
+    public ArrayList<HashMap<String, String>> selectAll() {
+        ArrayList<HashMap<String, String>> optionInforList = new ArrayList<>();
+        try {
+            Common common = new Common();
+            Statement statement = common.getStatement(); // Editor in Workbanch
+            String query = "SELECT *\n" + //
+                    "FROM user;";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                HashMap<String, String> optionInforRecord = new HashMap<>();
+                optionInforRecord.put("PW_ID", resultSet.getString("PW_ID"));
+                optionInforRecord.put("USER", resultSet.getString("USER"));
+
+                optionInforList.add(optionInforRecord);
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return optionInforList;
+    }
+
+    public int SelectWithUniqueID(String unique_id) {
+        return 0;
+    }
 }
+
 
 //     public int UpdateWithUniqueID(String unique_id) {
 //         int count = 0;
