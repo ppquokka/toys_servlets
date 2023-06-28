@@ -1,5 +1,3 @@
-// 회원관리, 설문하기, 설문통계 OptionInforsJSPServlet,OptionInforsDeleteServlet 두가지 활용
-
 package com.example.toys_servlets;
 
 import java.io.IOException;
@@ -15,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.toys_servlets.daos.UserInforsDao;
 
-@WebServlet(urlPatterns = "/userInforsJSPServlet")
-public class UserInforsJSPServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/userDetailInforsServlet")
+public class UserDetailInforsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,7 +28,7 @@ public class UserInforsJSPServlet extends HttpServlet {
             request.setAttribute("userInforList", userInforList);
 
             // 다음 파일(jsp) 호출
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/membersInformation.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/membersInformationdetail.jsp");
             requestDispatcher.forward(request, response);
 
         } catch (Exception e) {
