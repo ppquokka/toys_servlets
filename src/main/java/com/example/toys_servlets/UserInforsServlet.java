@@ -11,10 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d6e916e4e26827c6ab34333cd418d05e0871e3fa
 import com.example.toys_servlets.daos.UserInforsDao;
 
 @WebServlet(urlPatterns = "/userInforsServlet")

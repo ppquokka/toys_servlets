@@ -8,10 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-<<<<<<< HEAD
-=======
-
->>>>>>> d6e916e4e26827c6ab34333cd418d05e0871e3fa
 import com.example.toys_servlets.daos.UserInforsDao;
 
 @WebServlet(urlPatterns = "/UserInforsSelectServlet")
@@ -23,11 +19,7 @@ public class UserInforsSelectServlet extends HttpServlet {
             String unique_id = request.getParameter("unique_id");
 
             UserInforsDao userInforsDao = new UserInforsDao();
-<<<<<<< HEAD
-            int count = userInforsDao.DeleteWithUniqueID(unique_id);
-=======
             int count = userInforsDao.SelectWithUniqueID(unique_id);
->>>>>>> d6e916e4e26827c6ab34333cd418d05e0871e3fa
 
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter printWriter = response.getWriter();

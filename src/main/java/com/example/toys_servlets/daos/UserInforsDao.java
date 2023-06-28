@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.example.toys_servlets.commons.Commons;
+import com.example.toys_servlets.commons.Common;
 
 public class UserInforsDao {
     private ArrayList<HashMap<String, String>> userInforList; // userInforList 필드 선언 및 초기화
@@ -41,16 +41,16 @@ public class UserInforsDao {
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                HashMap<String, String> optionInforRecord = new HashMap<>();
-                optionInforRecord.put("PW_ID", resultSet.getString("PW_ID"));
-                optionInforRecord.put("USER", resultSet.getString("USER"));
+                HashMap<String, String> userInforRecord = new HashMap<>();
+                userInforRecord.put("PW_ID", resultSet.getString("PW_ID"));
+                userInforRecord.put("USER", resultSet.getString("USER"));
 
-                optionInforList.add(optionInforRecord);
+                userInforList.add(userInforRecord);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return optionInforList;
+        return userInforList;
     }
 
     public ArrayList<HashMap<String, String>> selectAll() {

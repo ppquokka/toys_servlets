@@ -13,19 +13,9 @@ public class Common {
      return UUID.randomUUID().toString();
      }
 
-<<<<<<< HEAD:src/main/java/com/example/toys_servlets/commons/Commons.java
-public class Commons {
-    // public String generateUUID() {
-    //     return UUID.randomUUID().toString();
-    // }   
-
 
 public Statement getStatement(){
         String url = "jdbc:mysql://192.168.0.41:3306/DB_TOYSSERVLET";
-=======
-    public Statement getStatement() {
-        String url = "jdbc:mysql://192.168.0.41:8080/db_toysservlet";
->>>>>>> c347ad5920654bf7206db98d6643bd265119c9ba:src/main/java/com/example/toys_servlets/commons/Common.java
         String user = "DB_TOYSSERVLET";
         String password = "!YOJULAB*";
 
