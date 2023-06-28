@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <% String search=(String) request.getAttribute("search"); %>
-            <form action="/oInforsServlet">
+            <form action="/userInforsServlet">
                 <label>검색
                     <input type="text" name="search" value="<%= search %>">
                 </label>

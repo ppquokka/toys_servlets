@@ -20,7 +20,7 @@ public class UserInforsSelectServlet  extends HttpServlet{
             String unique_id = request.getParameter("unique_id");
 
             UserInforsDao userInforsDao = new UserInforsDao();
-            int count = userInforsDao.SeleteWithUniqueID(unique_id);
+            int count = userInforsDao.DeleteWithUniqueID(unique_id);
 
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter printWriter = response.getWriter();

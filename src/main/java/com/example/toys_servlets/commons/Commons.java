@@ -18,13 +18,14 @@ public class Commons {
 public Statement getStatement(){
         String url = "jdbc:mysql://192.168.0.41:8080:3306/DB_TOYSSERVLET";
         String user = "DB_TOYSSERVLET";
-        String password = "!yojulab*";
+        String password = "!YOJULAB*";
 
         Statement statement = null;
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
             statement =  connection.createStatement();
         } catch (SQLException e) {
+            
             e.printStackTrace();
         }
         return statement;
