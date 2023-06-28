@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.example.study_servlets.controlls.commons.Commons;
+import com.example.toys_servlets.commons.Commons;
 
 public class OptionInforsDao {
     public int DeleteWithUniqueID(String unique_id){

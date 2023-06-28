@@ -21,22 +21,6 @@
 // import com.example.toys_servlets.daos.UserInforsDao;
 
 
-<<<<<<< HEAD
-@WebServlet(urlPatterns = "/userInforsJSPServlet")
-public class UserInforsJSPServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            String search = request.getParameter("search");
-            ArrayList optionInforList = new ArrayList<>();
-            UserInforsDao userInforsDao = new UserInforsDao();
-         
-            ArrayList<HashMap<String, String>> userInforList = userInforsDao.selectWithSearch(search);
-
-            request.setAttribute("search", search);
-            request.setAttribute("userInforList", userInforList);
-=======
 // @WebServlet(urlPatterns = "/userInforsJSPServlet")
 // public class UserInforsJSPServlet extends HttpServlet {
 //     @Override
@@ -51,7 +35,6 @@ public class UserInforsJSPServlet extends HttpServlet {
 
 //            request.setAttribute("search", search);
 //             request.setAttribute("userInforList", userInforList);
->>>>>>> 67ed827e642be6c7e482cf95ad1583be4909422b
 
 //             // getWriter 전에 charset 하기
 //             response.setContentType("text/html;charset=UTF-8");

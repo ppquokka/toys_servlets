@@ -12,7 +12,7 @@ public class UserInforsDao {
     public ArrayList<HashMap<String, String>> selectAll() {
         ArrayList<HashMap<String, String>> userInforList = new ArrayList<>();
         try {
-            Commons commons = new Commons();
+            Common commons = new Common();
             Statement statement = commons.getStatement();
            
             String query = "SELECT * FROM db-toysservlet.user;";
